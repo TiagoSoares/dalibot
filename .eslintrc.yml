@@ -1,0 +1,27 @@
+---
+extends:
+- airbnb-standard
+plugins:
+- filenames
+rules:
+  semi: [2, 'never']
+  import/order: ['error', { newlines-between: always }]
+  # TODO: The below lines are comment out, but we should enable filename rules soon
+  # filenames/match-exported: 2
+  # filenames/no-index: 2
+parserOptions:
+  sourceType: module
+  allowImportExportEverywhere: false
+  codeFrame: true
+settings:
+  import/resolver:
+    alias:
+      extensions:
+      - ".js"
+      - ".jsx"
+      - ".json"
+globals:
+  document: true
+  localStorage: true
+  window: true
+  FormData: true
